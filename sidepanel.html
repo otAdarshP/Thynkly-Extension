@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thynkly</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1 class="title">Thynkly</h1>
+      <button id="darkModeToggle" class="toggle-btn" title="Toggle Dark Mode">🌙</button>
+      <p class="subtitle">Your AI‑powered Research Pal</p>
+    </header>
+
+    <section class="selector">
+      <label class="option">
+        <input type="radio" name="operation" value="summarize" checked />
+        <span>Summarize</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="operation" value="suggest" />
+        <span>Suggest</span>
+      </label>
+    </section>
+
+    <section class="notes">
+      <h3>🗒️ Your Notes</h3>
+      <textarea id="notes" placeholder="Jot down your ideas here..."></textarea>
+      <button id="saveNotesBtn">💾 Save Notes</button>
+    </section>
+
+    <section id="results"></section>
+    <div id="loading" class="hidden">⏳ Processing...</div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

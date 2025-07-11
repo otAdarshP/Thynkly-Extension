@@ -1,0 +1,184 @@
+/* ================================
+   sidepanel.css — Full Updated CSS
+   ================================ */
+
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.header {
+  position: relative;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+  color: #1a73e8;
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.selector {
+  display: flex;
+  gap: 10px;
+}
+
+.selector .option {
+  display: flex;
+  align-items: center;
+}
+
+.selector input[type="radio"] {
+  margin-right: 4px;
+}
+
+.selector span {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.selector input[type="radio"]:checked + span {
+  background-color: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+.notes h3 {
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.notes textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  resize: vertical;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.notes button {
+  margin-top: 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.notes button:hover {
+  background-color: #155ab6;
+}
+
+#loading {
+  font-size: 14px;
+  color: #888;
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
+#loading.show {
+  display: block;
+}
+
+#results {
+  margin-top: 10px;
+}
+
+.result-item {
+  position: relative;
+  background: white;
+  padding: 20px 16px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.result-content {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  transition: transform 0.1s ease;
+}
+
+.copy-btn:hover {
+  transform: scale(1.2);
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark textarea,
+body.dark .result-item {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark button,
+body.dark .selector span {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+
+body.dark .notes button:hover,
+body.dark .selector input[type="radio"]:checked + span {
+  background-color: #555 !important;
+  border-color: #555 !important;
+}
